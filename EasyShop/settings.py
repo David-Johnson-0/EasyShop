@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-    'easyshopapp',
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
