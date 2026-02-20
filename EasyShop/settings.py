@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'EasyShop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'EasyShop',
+        'NAME': 'easyshop',
         'USER': 'admin',
         'PASSWORD': 'password',
         'HOST': 'localhost',
