@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['3.151.137.254', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'easyshopapp',
     'tinymce',
     'crispy_forms',
     'crispy_bootstrap5',
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+    'easyshopapp',
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
