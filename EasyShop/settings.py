@@ -31,6 +31,9 @@ ALLOWED_HOSTS = ['3.151.137.254', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'tinymce',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
