@@ -1,10 +1,12 @@
 {% extends 'easyshopapp/base.html' %}
 {% block content %}
-<h1>Login</h1>
-<form method="post">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="Username"><br>
-    <input type="password" name="password" placeholder="Password"><br>
-    <button type="submit">Login</button>
-</form>
+<section class="eshp-auth">
+    <h1>Login</h1>
+    <form method="post" class="eshp-auth-form">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit" class="eshp-btn eshp-btn-primary">Login</button>
+    </form>
+</section>
 {% endblock %}

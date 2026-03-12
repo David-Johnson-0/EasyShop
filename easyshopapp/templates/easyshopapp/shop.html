@@ -1,11 +1,12 @@
 {% extends 'easyshopapp/base.html' %}
 {% block content %}
-<h1>Shop</h1>
-<!-- Search bar -->
-<form method="get" action="/shop/" class="eshp-shop-search">
-    <input type="text" name="q" placeholder="Search...">
-    <button type="submit">Search</button>
-</form>
+<section class="eshp-shop-header">
+    <h1>Shop</h1>
+    <form method="get" action="/shop/" class="eshp-shop-search">
+        <input type="text" name="q" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+</section>
 <div class="eshp-item-list">
     {% comment %} Filler items for now; will be replaced with database items {% endcomment %}
     <div class="eshp-item">

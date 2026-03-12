@@ -5,23 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyShop</title>
     <link rel="stylesheet" href="/static/easyshopapp/style.css">
+    <script>
+        function toggleSidebar() {
+            document.getElementById('eshp-sidebar').classList.toggle('open');
+            document.getElementById('eshp-overlay').classList.toggle('show');
+        }
+        function closeSidebar() {
+            document.getElementById('eshp-sidebar').classList.remove('open');
+            document.getElementById('eshp-overlay').classList.remove('show');
+        }
+    </script>
 </head>
 <body>
-    <header>
-        <h1>EasyShop</h1>
-        <nav>
-            <a href="/">Home</a> |
-            <a href="/shop/">Shop</a> |
-            <a href="/account/">Account</a> |
-            <a href="/login/">Login</a> |
+    <div id="eshp-overlay" onclick="closeSidebar()"></div>
+    <aside id="eshp-sidebar">
+        <button class="eshp-close-btn" onclick="closeSidebar()">&times;</button>
+        <h2>Settings</h2>
+        <ul>
+            <li><a href="/settings/">Profile Settings</a></li>
+            <li><a href="/account/">Account</a></li>
+            <li><a href="/logout/">Logout</a></li>
+        </ul>
+    </aside>
+    <header class="eshp-header">
+        <button class="eshp-hamburger" onclick="toggleSidebar()">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="eshp-logo">Easy Shop</div>
+        <nav class="eshp-nav">
+            <a href="/shop/">Shop</a>
+            <a href="/checkout/">Checkout</a>
             <a href="/logout/">Logout</a>
+            {% if request.path == '/' %}
+                <a href="#about" class="eshp-about-link">About the Website</a>
+            {% endif %}
         </nav>
     </header>
     <main>
         {% block content %}{% endblock %}
     </main>
-    <footer>
-        <p>&copy; 2026 EasyShop</p>
+    <footer class="eshp-footer">
+        <div class="eshp-footer-content">
+            <span>&copy; 2026 EasyShop</span>
+            <span>Created by Your Name | <a href="mailto:contact@easyshop.com">Contact</a></span>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,10 +1,12 @@
 {% extends 'easyshopapp/base.html' %}
 {% block content %}
-<h1>Checkout</h1>
-<form method="post">
-    {% csrf_token %}
-    <label>Credit Card Info:</label><br>
-    <input type="text" name="credit_info" placeholder="Card Number"><br>
-    <button type="submit">Pay</button>
-</form>
+<section class="eshp-checkout">
+    <h1>Checkout</h1>
+    <form method="post" class="eshp-checkout-form">
+        {% csrf_token %}
+        <label for="credit_info">Credit Card Info:</label>
+        <input type="text" id="credit_info" name="credit_info" placeholder="Card Number">
+        <button type="submit" class="eshp-btn eshp-btn-primary">Pay</button>
+    </form>
+</section>
 {% endblock %}

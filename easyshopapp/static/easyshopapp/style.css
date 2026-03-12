@@ -184,3 +184,253 @@ footer {
 .eshp-shop-search input[type="text"] {
     flex: 1;
 }
+
+/* Modern Header, Sidebar, Hamburger Menu, Navigation, and Footer */
+.eshp-header {
+    background: var(--eshp-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.eshp-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.eshp-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+.eshp-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+}
+.eshp-nav a:hover, .eshp-about-link:hover {
+    background: var(--eshp-secondary);
+    color: var(--eshp-dark);
+}
+.eshp-hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-right: 1.5rem;
+    outline: none;
+}
+.eshp-hamburger span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+}
+#eshp-sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    background: var(--eshp-dark);
+    color: #fff;
+    box-shadow: 2px 0 12px rgba(44,62,80,0.12);
+    z-index: 200;
+    padding: 2rem 1.2rem 1.2rem 1.2rem;
+    transition: left 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+#eshp-sidebar.open {
+    left: 0;
+}
+#eshp-sidebar h2 {
+    margin-top: 0;
+    color: var(--eshp-secondary);
+}
+#eshp-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+#eshp-sidebar li {
+    margin: 1.2rem 0;
+}
+#eshp-sidebar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+#eshp-sidebar a:hover {
+    color: var(--eshp-secondary);
+}
+.eshp-close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+#eshp-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.2);
+    z-index: 150;
+}
+#eshp-overlay.show {
+    display: block;
+}
+.eshp-footer {
+    background: var(--eshp-dark);
+    color: #fff;
+    text-align: center;
+    padding: 1.2rem 0 1.2rem 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+.eshp-footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+.eshp-footer-content a {
+    color: var(--eshp-secondary);
+    text-decoration: underline;
+}
+
+.eshp-about {
+    margin: 3rem auto 0 auto;
+    padding: 2rem 1rem;
+    background: #fffbe6;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(255,215,0,0.07);
+    max-width: 700px;
+    text-align: center;
+}
+.eshp-about h2 {
+    color: var(--eshp-primary);
+    margin-bottom: 1rem;
+}
+.eshp-about p {
+    color: #444;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 700px) {
+    .eshp-header { flex-direction: column; padding: 1rem; }
+    .eshp-logo { font-size: 1.3rem; }
+    .eshp-nav { gap: 0.7rem; }
+    main { padding: 1rem 0.2rem 5rem 0.2rem; }
+    .eshp-item-list { flex-direction: column; align-items: center; }
+}
+
+.eshp-shop-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+}
+.eshp-shop-header h1 {
+    margin: 0;
+    color: var(--eshp-primary);
+}
+
+.eshp-checkout {
+    max-width: 400px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+    padding: 2rem 2rem 1.5rem 2rem;
+}
+.eshp-checkout-form label {
+    font-weight: 500;
+    color: var(--eshp-primary);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.eshp-checkout-form input[type="text"] {
+    margin-bottom: 1.2rem;
+}
+.eshp-checkout-form button {
+    width: 100%;
+}
+
+.eshp-auth {
+    max-width: 350px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+    padding: 2rem 2rem 1.5rem 2rem;
+}
+.eshp-auth-form input {
+    margin-bottom: 1.2rem;
+}
+.eshp-auth-form button {
+    width: 100%;
+}
+
+.eshp-account {
+    max-width: 400px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+    padding: 2rem 2rem 1.5rem 2rem;
+    text-align: center;
+}
+.eshp-account-links {
+    margin-top: 1.5rem;
+}
+.eshp-account-links .eshp-btn {
+    margin: 0 0.5rem;
+}
+
+.eshp-settings {
+    max-width: 400px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+    padding: 2rem 2rem 1.5rem 2rem;
+    text-align: center;
+}
+.eshp-settings-options {
+    margin-top: 1.5rem;
+}
+
+.eshp-logout {
+    max-width: 350px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+    padding: 2rem 2rem 1.5rem 2rem;
+    text-align: center;
+}
+.eshp-logout .eshp-btn {
+    margin-top: 1.2rem;
+}
