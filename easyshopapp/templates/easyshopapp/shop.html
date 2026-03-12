@@ -2,11 +2,32 @@
 {% block content %}
 <h1>Shop</h1>
 <!-- Search bar -->
-<form method="get" action="/shop/">
+<form method="get" action="/shop/" class="eshp-shop-search">
     <input type="text" name="q" placeholder="Search...">
     <button type="submit">Search</button>
 </form>
-<ul>
-    <!-- Items will be listed here -->
-</ul>
+<div class="eshp-item-list">
+    {% comment %} Filler items for now; will be replaced with database items {% endcomment %}
+    <div class="eshp-item">
+        <img src="https://via.placeholder.com/120" alt="Item 1" class="eshp-item-img">
+        <div class="eshp-item-info">
+            <h3>Wireless Headphones</h3>
+            <p class="eshp-item-cost">$59.99</p>
+        </div>
+    </div>
+    <div class="eshp-item">
+        <img src="https://via.placeholder.com/120" alt="Item 2" class="eshp-item-img">
+        <div class="eshp-item-info">
+            <h3>Smart Watch</h3>
+            <p class="eshp-item-cost">$129.99</p>
+        </div>
+    </div>
+    <div class="eshp-item">
+        <img src="https://via.placeholder.com/120" alt="Item 3" class="eshp-item-img">
+        <div class="eshp-item-info">
+            <h3>Bluetooth Speaker</h3>
+            <p class="eshp-item-cost">$39.99</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
