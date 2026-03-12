@@ -330,3 +330,17 @@ main {
     background: #ffecd2;
     color: #ff7e5f;
 }
+
+.eshp-errors {
+    color: #e74c3c;
+    background: #fff0f0;
+    border: 1px solid #e74c3c;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    list-style: disc inside;
+    font-size: 1rem;
+}
+.eshp-errors li {
+    margin-bottom: 0.3rem;
+}

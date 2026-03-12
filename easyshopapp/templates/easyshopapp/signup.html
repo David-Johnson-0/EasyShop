@@ -2,10 +2,21 @@
 {% block content %}
 <section class="eshp-auth">
     <h1>Signup</h1>
+    {% if messages %}
+        <ul class="eshp-errors">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
     <form method="post" class="eshp-auth-form">
         {% csrf_token %}
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="number" name="age" placeholder="Age" min="0" required>
+        <input type="text" name="phone_number" placeholder="Phone Number" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="text" name="credit_card" placeholder="Credit Card Info" required>
         <button type="submit" class="eshp-btn eshp-btn-primary">Signup</button>
     </form>
 </section>
