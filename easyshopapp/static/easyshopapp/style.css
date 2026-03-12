@@ -74,3 +74,66 @@ footer {
     letter-spacing: 1px;
     box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
 }
+
+/* EasyShop Color Theme */
+:root {
+    --eshp-primary: #007bff;
+    --eshp-secondary: #ffd700;
+    --eshp-dark: #2d3e50;
+    --eshp-light: #f8fafc;
+    --eshp-accent: #e2eafc;
+}
+
+.eshp-hero {
+    text-align: center;
+    padding: 3rem 1rem 2rem 1rem;
+    background: linear-gradient(120deg, var(--eshp-light) 0%, var(--eshp-accent) 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.07);
+    margin-bottom: 2rem;
+}
+.eshp-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.eshp-highlight {
+    color: var(--eshp-primary);
+    font-weight: bold;
+}
+.eshp-lead {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 2rem;
+}
+.eshp-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.eshp-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+}
+.eshp-btn-primary {
+    background: var(--eshp-primary);
+    color: #fff;
+    border: none;
+}
+.eshp-btn-primary:hover {
+    background: #0056b3;
+}
+.eshp-btn-secondary {
+    background: var(--eshp-secondary);
+    color: var(--eshp-dark);
+    border: none;
+}
+.eshp-btn-secondary:hover {
+    background: #ffe066;
+    color: var(--eshp-dark);
+}

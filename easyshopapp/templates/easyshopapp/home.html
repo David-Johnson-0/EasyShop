@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyShopApp Home</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
-        .container { max-width: 600px; margin: 80px auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; }
-        p { color: #555; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome to EasyShopApp!</h1>
-        <p>This is the home page of your new Django app.</p>
+{% extends 'easyshopapp/base.html' %}
+{% block content %}
+<div class="eshp-hero">
+    <h1>Welcome to <span class="eshp-highlight">EasyShop</span></h1>
+    <p class="eshp-lead">Your one-stop shop for everything you need. Discover amazing products, enjoy a seamless shopping experience, and manage your account with ease.</p>
+    <div class="eshp-actions">
+        <a href="/shop/" class="eshp-btn eshp-btn-primary">Start Shopping</a>
+        <a href="/signup/" class="eshp-btn eshp-btn-secondary">Create Account</a>
     </div>
-</body>
-</html>
+</div>
+{% endblock %}
