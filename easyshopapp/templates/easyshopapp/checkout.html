@@ -1,0 +1,10 @@
+{% extends 'easyshopapp/base.html' %}
+{% block content %}
+<h1>Checkout</h1>
+<form method="post">
+    {% csrf_token %}
+    <label>Credit Card Info:</label><br>
+    <input type="text" name="credit_info" placeholder="Card Number"><br>
+    <button type="submit">Pay</button>
+</form>
+{% endblock %}

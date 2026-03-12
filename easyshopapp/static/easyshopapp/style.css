@@ -1,0 +1,76 @@
+/* EasyShop Professional Theme */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f8fafc 0%, #e2eafc 100%);
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+header {
+    background: #2d3e50;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.7rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #ffd700;
+}
+main {
+    padding: 2.5rem 1rem 5rem 1rem;
+    min-height: 70vh;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.07);
+}
+h1, h2, h3 {
+    color: #2d3e50;
+}
+form input, form button {
+    margin: 0.7rem 0;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #cfd8dc;
+    width: 100%;
+    box-sizing: border-box;
+}
+form button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+form button:hover {
+    background: #0056b3;
+}
+footer {
+    background: #2d3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1.2rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}

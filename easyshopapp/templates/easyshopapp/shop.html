@@ -1,0 +1,12 @@
+{% extends 'easyshopapp/base.html' %}
+{% block content %}
+<h1>Shop</h1>
+<!-- Search bar -->
+<form method="get" action="/shop/">
+    <input type="text" name="q" placeholder="Search...">
+    <button type="submit">Search</button>
+</form>
+<ul>
+    <!-- Items will be listed here -->
+</ul>
+{% endblock %}
