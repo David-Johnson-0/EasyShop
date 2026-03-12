@@ -25,7 +25,12 @@
         <ul>
             <li><a href="/settings/">Profile Settings</a></li>
             <li><a href="/account/">Account</a></li>
-            <li><a href="/logout/">Logout</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="/logout/">Logout</a></li>
+            {% else %}
+                <li><a href="/login/">Login</a></li>
+                <li><a href="/signup/">Signup</a></li>
+            {% endif %}
         </ul>
     </aside>
     <header class="eshp-header">
@@ -36,7 +41,12 @@
         <nav class="eshp-nav">
             <a href="/shop/">Shop</a>
             <a href="/checkout/">Checkout</a>
-            <a href="/logout/">Logout</a>
+            {% if user.is_authenticated %}
+                <a href="/logout/">Logout</a>
+            {% else %}
+                <a href="/login/">Login</a>
+                <a href="/signup/">Signup</a>
+            {% endif %}
             {% if request.path == '/' %}
                 <a href="#about" class="eshp-about-link">About the Website</a>
             {% endif %}
