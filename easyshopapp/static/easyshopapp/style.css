@@ -85,12 +85,14 @@ body {
     box-shadow: 2px 0 12px rgba(44,62,80,0.12);
     z-index: 200;
     padding: 2rem 1.2rem 1.2rem 1.2rem;
-    transition: left 0.3s;
+    transition: left 0.3s, visibility 0.3s;
     display: flex;
     flex-direction: column;
+    visibility: hidden;
 }
 #eshp-sidebar.open {
     left: 0;
+    visibility: visible;
 }
 #eshp-sidebar h2 {
     margin-top: 0;
