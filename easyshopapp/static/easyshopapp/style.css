@@ -1,191 +1,25 @@
-/* EasyShop Professional Theme */
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(120deg, #f8fafc 0%, #e2eafc 100%);
+/* Reset and base styles */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #e2eafc 0%, #f8fafc 100%);
     color: #222;
-}
-header {
-    background: #2d3e50;
-    color: #fff;
-    padding: 1.5rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-header h1 {
-    margin: 0;
-    font-size: 2.2rem;
-    letter-spacing: 2px;
-}
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 0.7rem;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-nav a:hover {
-    color: #ffd700;
-}
-main {
-    padding: 2.5rem 1rem 5rem 1rem;
-    min-height: 70vh;
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(44,62,80,0.07);
-}
-h1, h2, h3 {
-    color: #2d3e50;
-}
-form input, form button {
-    margin: 0.7rem 0;
-    padding: 0.7rem;
-    font-size: 1rem;
-    border-radius: 6px;
-    border: 1px solid #cfd8dc;
-    width: 100%;
-    box-sizing: border-box;
-}
-form button {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-form button:hover {
-    background: #0056b3;
-}
-footer {
-    background: #2d3e50;
-    color: #fff;
-    text-align: center;
-    padding: 1.2rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+    min-height: 100vh;
 }
 
-/* EasyShop Color Theme */
 :root {
     --eshp-primary: #007bff;
     --eshp-secondary: #ffd700;
     --eshp-dark: #2d3e50;
     --eshp-light: #f8fafc;
     --eshp-accent: #e2eafc;
+    --eshp-danger: #e74c3c;
 }
 
-.eshp-hero {
-    text-align: center;
-    padding: 3rem 1rem 2rem 1rem;
-    background: linear-gradient(120deg, var(--eshp-light) 0%, var(--eshp-accent) 100%);
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(44,62,80,0.07);
-    margin-bottom: 2rem;
-}
-.eshp-hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-.eshp-highlight {
-    color: var(--eshp-primary);
-    font-weight: bold;
-}
-.eshp-lead {
-    font-size: 1.2rem;
-    color: #444;
-    margin-bottom: 2rem;
-}
-.eshp-actions {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-.eshp-btn {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-    box-shadow: 0 2px 8px rgba(44,62,80,0.07);
-}
-.eshp-btn-primary {
-    background: var(--eshp-primary);
-    color: #fff;
-    border: none;
-}
-.eshp-btn-primary:hover {
-    background: #0056b3;
-}
-.eshp-btn-secondary {
-    background: var(--eshp-secondary);
-    color: var(--eshp-dark);
-    border: none;
-}
-.eshp-btn-secondary:hover {
-    background: #ffe066;
-    color: var(--eshp-dark);
-}
-
-.eshp-item-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 2rem;
-    justify-content: flex-start;
-}
-.eshp-item {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 12px rgba(44,62,80,0.08);
-    padding: 1.2rem;
-    display: flex;
-    align-items: center;
-    width: 320px;
-    transition: box-shadow 0.2s;
-}
-.eshp-item:hover {
-    box-shadow: 0 4px 24px rgba(44,62,80,0.15);
-}
-.eshp-item-img {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 1.2rem;
-    background: #e2eafc;
-}
-.eshp-item-info h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.2rem;
-    color: var(--eshp-primary);
-}
-.eshp-item-cost {
-    font-size: 1.1rem;
-    color: var(--eshp-dark);
-    font-weight: bold;
-}
-.eshp-shop-search {
-    margin-bottom: 1.5rem;
-    display: flex;
-    gap: 0.5rem;
-}
-.eshp-shop-search input[type="text"] {
-    flex: 1;
-}
-
-/* Modern Header, Sidebar, Hamburger Menu, Navigation, and Footer */
 .eshp-header {
     background: var(--eshp-primary);
     color: #fff;
@@ -213,7 +47,7 @@ footer {
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1rem;
-    transition: color 0.2s;
+    transition: color 0.2s, background 0.2s;
     padding: 0.3rem 0.7rem;
     border-radius: 4px;
 }
@@ -296,6 +130,17 @@ footer {
 #eshp-overlay.show {
     display: block;
 }
+
+main {
+    padding: 2.5rem 1rem 5rem 1rem;
+    min-height: 70vh;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.07);
+}
+
 .eshp-footer {
     background: var(--eshp-dark);
     color: #fff;
@@ -319,30 +164,11 @@ footer {
     text-decoration: underline;
 }
 
-.eshp-about {
-    margin: 3rem auto 0 auto;
-    padding: 2rem 1rem;
-    background: #fffbe6;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(255,215,0,0.07);
-    max-width: 700px;
-    text-align: center;
-}
-.eshp-about h2 {
-    color: var(--eshp-primary);
-    margin-bottom: 1rem;
-}
-.eshp-about p {
-    color: #444;
-    font-size: 1.1rem;
-}
-
 @media (max-width: 700px) {
     .eshp-header { flex-direction: column; padding: 1rem; }
     .eshp-logo { font-size: 1.3rem; }
     .eshp-nav { gap: 0.7rem; }
     main { padding: 1rem 0.2rem 5rem 0.2rem; }
-    .eshp-item-list { flex-direction: column; align-items: center; }
 }
 
 .eshp-shop-header {
