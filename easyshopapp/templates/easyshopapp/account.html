@@ -2,6 +2,14 @@
 {% block content %}
 <section class="eshp-account">
     <h1>Account</h1>
+    <div class="eshp-account-info">
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Age:</strong> {{ user.age }}</p>
+        <p><strong>Phone Number:</strong> {{ user.phone_number }}</p>
+        <p><strong>Password (hashed):</strong> {{ user.password }}</p>
+        <p><strong>Credit Card Info:</strong> {{ user.credit_card }}</p>
+    </div>
     <div class="eshp-account-links">
         <a href="/settings/" class="eshp-btn eshp-btn-secondary">Settings</a>
     </div>
